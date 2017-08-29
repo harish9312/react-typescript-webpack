@@ -5,7 +5,8 @@ var config = {
     entry: ["./src/index.tsx", 'webpack-dev-server/client?http://localhost:8080'],
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html'
+            template: 'index.ejs',
+            filename: 'index.html'
         }),
        
     ],
@@ -20,7 +21,7 @@ var config = {
     module: {
         rules: [
             { test: /\.tsx?$/, use: 'tslint-loader', enforce: 'pre' },
-            { test: /\.tsx?$/, use: 'awesome-typescript-loader' },
+            { test: /\.tsx?$/, use: ['babel-loader', 'awesome-typescript-loader'] },
             { test: /\.(css|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
             { test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/, use: 'url-loader?limit=1024&name=fonts/[name].[ext]' },
             { test: /\.(jpg|jpeg|gif|png)$/, use: 'url-loader?limit=10&mimetype=image/(jpg|jpeg|gif|png)&name=images/[name].[ext]' }
