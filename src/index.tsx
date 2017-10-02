@@ -6,18 +6,18 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import {
-    BrowserRouter as Router,
+    HashRouter,
     Route,
     Link
-} from 'react-router-dom'
+} from 'react-router-dom';
 ReactDOM.render(
     <Provider store={store}>
-        <Router>
+        <HashRouter>
             <div>
                 <Route path="/" component={HomePage} />
                 <Route path="/hello" component={Hello} />
             </div>
-        </Router>
+        </HashRouter>
     </Provider>,
     document.getElementById('root')
 );

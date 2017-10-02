@@ -8,9 +8,9 @@ export class HomePage extends React.Component<IHomePageProps, {}> {
 
     render() {
         return (
-                <Navbar>
-                    
-                </Navbar>
-        )
+            <div>
+                Hello
+            </div>
+        );
     }
 }

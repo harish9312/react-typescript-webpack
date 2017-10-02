@@ -14,7 +14,7 @@ export function configureStore(initialState = {}) {
         composeEnhancers(
             applyMiddleware(...getMiddlewares())
         )
-    )
+    );
     return store;
 }
 

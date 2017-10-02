@@ -28,6 +28,7 @@ var config = {
         ]
     },
     devServer: {
+        historyApiFallback: true,
         contentBase: path.join(__dirname, 'build'),
         hot: true,
         inline: true
